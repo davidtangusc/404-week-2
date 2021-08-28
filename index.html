@@ -8,6 +8,7 @@
   </head>
   <body>
     <div id="results"></div>
+    <div id="more-suggestions"></div>
 
     <script type="template/handlebars" id="activity-template">
       <div class="activity">
@@ -23,7 +24,9 @@
           {{/if}}
         </ul>
 
-        <button type="button">Show me more activities like this</button>
+        {{#if renderButton}}
+          <button type="button">Show me more activities like this</button>
+        {{/if}}
       </div>
     </script>
 
