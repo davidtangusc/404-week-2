@@ -9,14 +9,18 @@
   <body>
     <div id="results"></div>
 
-    <script type="template/handlebars" id="person-template">
-      <div class="person">
-        <h3>{{name}}</h3>
-        <img src="{{image}}" alt="{{name}}" width="150" />
+    <script type="template/handlebars" id="activity-template">
+      <div class="activity">
+        <h3>{{activity}}</h3>
         <ul>
-          {{#each hobbies}}
-            <li>{{name}} - {{years}} years of experience</li>
-          {{/each}}
+          <li>Type: {{type}}</li>
+          <li>Price: {{price}}</li>
+
+          {{#if link}}
+            <li>
+              <a href="{{link}}">{{link}}</a>
+            </li>
+          {{/if}}
         </ul>
       </div>
     </script>
